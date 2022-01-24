@@ -9,10 +9,11 @@ function  callGit(){
 
     response.data.map((element)=>{
       axios.get(`https://api.github.com/repos/${element.full_name}/deployments`).then((myResponse)=>{
-    
+      
 
         if (myResponse.data.length>0){
-          console.log(element)
+          const number=Math.floor(Math.random() * 10)
+
        const {name,language,updated_at,html_url}= element
         
        axios.get(`https://api.unsplash.com/search/photos?query=${name}`,
@@ -22,7 +23,7 @@ function  callGit(){
 
         let localrepodetails={
           projectName:name.toUpperCase(),
-         imageUrl:iurl.data.results[0].urls.regular,
+         imageUrl:iurl.data.results[number].urls.regular,
          projectCategory:language,
          gitHubLink:html_url,
          updated_at:moment().format('YYYY/MM/DD'),
