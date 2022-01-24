@@ -23,7 +23,7 @@ function  callGit(){
 
         let localrepodetails={
           projectName:name.toUpperCase(),
-         imageUrl:iurl?.data?.results[number]?.urls?.regular,
+         imageUrl:iurl?.data?.results[0]?.urls?.regular,
          projectCategory:language,
          gitHubLink:html_url,
          updated_at:moment(updated_at).format('YYYY/MM/DD'),
