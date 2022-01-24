@@ -23,10 +23,10 @@ function  callGit(){
 
         let localrepodetails={
           projectName:name.toUpperCase(),
-         imageUrl:iurl.data.results[number].urls.regular,
+         imageUrl:iurl?.data?.results[number]?.urls?.regular,
          projectCategory:language,
          gitHubLink:html_url,
-         updated_at:moment().format('YYYY/MM/DD'),
+         updated_at:moment(updated_at).format('YYYY/MM/DD'),
          siteLink:`https://mazamim.github.io/${name}`
          }
 
@@ -57,7 +57,6 @@ function  callGit(){
 
 
 
-  console.log(repodetails)
 
   
 }
@@ -66,18 +65,6 @@ function  callGit(){
 
 
 callGit()
-
-async function callunplashApi(name){
-  const response = await axios.get(`https://api.unsplash.com/search/photos?query=${name}`,
-  {
-    headers:{Authorization:'Client-ID gQVMOjL4HUqNYan3-z1-I9tKntkqzDD_xrjTXwKYI1Y'}
-  })
-
-return response.data.results[0].urls.regular
-}
-
-
-
 
 var FormEl = $('#myform');
 
