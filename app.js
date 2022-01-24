@@ -12,7 +12,7 @@ function  callGit(){
       
 
         if (myResponse.data.length>0){
-          const number=Math.floor(Math.random() * 10)
+          const number=Math.floor(Math.random() * 4)
 
        const {name,language,updated_at,html_url}= element
         
