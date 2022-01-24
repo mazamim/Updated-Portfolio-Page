@@ -13,6 +13,7 @@ function  callGit(){
 
         if (myResponse.data.length>0){
           const number=Math.floor(Math.random() * 4)
+          var defaultUrl ='"https://images.unsplash.com/photo-1628277613967-6abca504d0ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"'
 
        const {name,language,updated_at,html_url}= element
         
@@ -23,7 +24,7 @@ function  callGit(){
 
         let localrepodetails={
           projectName:name.toUpperCase(),
-         imageUrl:iurl?.data?.results[0]?.urls?.regular,
+         imageUrl:iurl.data.results[0].urls.regular || defaultUrl,
          projectCategory:language,
          gitHubLink:html_url,
          updated_at:moment(updated_at).format('YYYY/MM/DD'),
