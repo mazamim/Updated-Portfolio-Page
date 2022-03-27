@@ -18,7 +18,7 @@ clone at:- github clone https://github.com/mazamim/Updated-Portfolio-Page.git
 
 #future Upgrade
 1.Images from https://unsplash.com/developers  api required to align propertly depend on their height. I am planing to use custom grid system.
-2.Required some styling on Experience Section
+2.Required some styling on Experience Sections
 
 
 screenshots
